@@ -9,6 +9,7 @@ import UIKit
 
 class DeviceTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var deviceNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
