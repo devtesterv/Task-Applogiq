@@ -82,7 +82,9 @@ class ViewController: UIViewController {
         print("Add Button User Interaction: \(isEnabled ? "Enabled" : "Disabled")")
         print("Minus Button User Interaction: \(isEnabled ? "Enabled" : "Disabled")")
         if mockDeviceOptions.count > 0 {
-            mockDeviceOptions.removeFirst()
+            if let index = mockDeviceOptions.firstIndex(where: { $0.name == "AC" }) {
+                mockDeviceOptions.remove(at: index)
+            }
             roomOptionListCollectionView.reloadData()
         }
     }
